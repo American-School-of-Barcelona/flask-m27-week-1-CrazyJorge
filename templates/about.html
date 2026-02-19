@@ -1,11 +1,14 @@
 <title>About me!</title>
-<back><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/"><b>Go back</b></a></back>
-<h1 id="myText">My name is <span id="colorWord">Jorge</span> and I like to play video games, like Geometry Dash, Roblox and Rainbow Six Siege! I also like to draw sometimes!</h1>
+<back><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/?name={{name}}"><b>Go back</b></a></back>
+<h1 id="myText">My name is <span id="colorWord">Jorge!</span><br>I like to play video games with my friends, like Geometry Dash, Roblox and Rainbow Six Siege! I also like to draw sometimes!</h1>
 <h2>My drawings!<span style="font-size: 18px">(some are WIP!)</span></h2>
 
-<drawing1><img src="https://media.discordapp.net/attachments/1271959172120051782/1337773104226897972/image.png?ex=6996638a&is=6995120a&hm=cf0d5e117fde5f7f0e7cc6477698e68b0157b7047cc7a3dc11612931142a1272&=&format=webp&quality=lossless&width=1489&height=1332" alt="Chloe Diamond" style="width:420px;height:420px;"></drawing1>
-<drawing2><img src="https://media.discordapp.net/attachments/1271959172120051782/1345824587631562772/apg_cat.png?ex=6996ad11&is=69955b91&hm=fa119e0a7d86f35c113ead9cc709c595fb7652cfcd3f7eb9ce2f44c11dfcc552&=&format=webp&quality=lossless&width=880&height=1332" alt="APG Cat" style="width:320px;height:520px;"></drawing2>
-<drawing3><img src="https://media.discordapp.net/attachments/1299797183356469258/1299797183763189801/Bricker_Miku.png?ex=6997fab5&is=6996a935&hm=b4f0d9a2fa5a1763b76e6ac9f22a0a19a38ba4e2443314d0deb5e78cac7bee04&=&format=webp&quality=lossless&width=1332&height=1332" alt="Bricker Miku" style="width:420px;height:420px;"></drawing3>
+<div class="images">
+<div><img src="https://media.discordapp.net/attachments/1271959172120051782/1337773104226897972/image.png?ex=6996638a&is=6995120a&hm=cf0d5e117fde5f7f0e7cc6477698e68b0157b7047cc7a3dc11612931142a1272&=&format=webp&quality=lossless&width=1489&height=1332" alt="Chloe Diamond" style="width:420px;height:420px;"></div>
+<div><img src="https://media.discordapp.net/attachments/1271959172120051782/1345824587631562772/apg_cat.png?ex=6996ad11&is=69955b91&hm=fa119e0a7d86f35c113ead9cc709c595fb7652cfcd3f7eb9ce2f44c11dfcc552&=&format=webp&quality=lossless&width=880&height=1332" alt="APG Cat" style="width:320px;height:520px;"></div>
+<div><img src="https://media.discordapp.net/attachments/1299797183356469258/1299797183763189801/Bricker_Miku.png?ex=6997fab5&is=6996a935&hm=b4f0d9a2fa5a1763b76e6ac9f22a0a19a38ba4e2443314d0deb5e78cac7bee04&=&format=webp&quality=lossless&width=1332&height=1332" alt="Bricker Miku" style="width:420px;height:420px;"></div>
+</div>
+
 <style>
     body {
         padding: 2rem;
@@ -36,22 +39,10 @@
         text-shadow: 1px 1px 2px black;
     }
 
-    drawing1 {
-       position: absolute;
-       left: 20px;
-       top: 340px;
-    }
-
-    drawing2 {
-       position: absolute;
-       left: 450px;
-       top: 270px;
-    }
-
-    drawing3 {
-       position: absolute;
-       left: 700px;
-       top: 340px;
+    .images {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 </style>
 
