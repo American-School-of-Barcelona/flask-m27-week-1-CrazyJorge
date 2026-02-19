@@ -1,0 +1,50 @@
+<title>Home!</title>
+
+<h1 id="myText"> Haiiii <span id="colorWord">{{name}}!!!!</span></h1>
+<h2><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/about"><b>About me!</b></a></h2>
+<h3><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/about"><b>Task list!</b></a></h2>
+
+<style>
+    body {
+        padding: 2rem;
+        background-image: url('https://chat.google.com/u/1/api/get_attachment_url?url_type=FIFE_URL&content_type=image%2Fgif&attachment_token=AOo0EEVJSldhWM1duYTWMf6bmvPa5S5JAmuFJspNER%2BkHtTfZ1oJKzLtXtQOZ4P5tszwW1d2SAuy4NlybwCZo29Hu9IAxcMKWLkRs0ip3QmZn4b0nbHyFOkuxtpmnSOLTn7P4YjMTtt3ho4Ykv1AhLlzBfZP9WZatxEmRyZHcnrg%2B9JYpR8jMJ0wQCX2E%2BTQuDGVEYtDPqji6m8ambQWfAJ8BmWrb%2F1a1mLoharR02BNuSxYx0ugjQGJrmVvKj5jQB5BSATLQQapSj2k5ZISEhbNjUExhlQV3Hu4%2B2sXDOZBZOzDKmuPNj9AOgnQMIywBGkHN1j1yDnY%2FjexhdLf%2Fsp%2BQj5TC51xTprcU3i7ujYONsemG1kaW4rRBoMNHs6TQVdSEGZfy3Jl%2BWRHH1Uq4C3BbHDiN%2Be0Gu28%2FnA2x1bp54x7Rne5jFoG8jcEpzuXo7Mca8K%2Bte4e6qZemPTyXeN%2FcrrfWvorMGddbYhXscUGv%2B3t9C9si9pT1qTqpQMZaq%2FDkNvJwmNwEbpc9Oz99fxYJlz0O7b7wdJKnA7S9TlFSWEMZ28xsS1gOvPNcIvMu4oGHlVfvd8CGNSsBpMDc0phCr2zmkzNKBrrY1rvYTWNguxpeog4GvJ%2BZNQbYquMrQruAmg%3D&allow_caching=true&sz=w512&authuser=1');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    h1 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 50;
+        text-shadow: 1px 1px 2px black;
+        transition: color 0.05s ease-in-out;
+    }
+
+    h2 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30;
+        text-shadow: 1px 1px 2px black;
+    }
+
+    h3 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 30;
+        text-shadow: 1px 1px 2px black;
+    }
+</style>
+
+<script>
+    const colorWord = document.getElementById('colorWord');
+
+    function changeTextColor() {
+        if (!colorWord) return;
+        // HSL: Hue (0-360) gives all colors, Saturation 100% = vibrant, Lightness 50% = mid-brightness
+        const hue = Math.floor(Math.random() * 360);
+        const randomColor = `hsl(${hue}, 100%, 50%)`;
+        colorWord.style.color = randomColor;
+    }
+
+    setInterval(changeTextColor, 100);
+</script>
