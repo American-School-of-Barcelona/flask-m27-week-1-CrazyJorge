@@ -4,7 +4,7 @@ app = Flask(__name__)
 
 # TODO: Add your routes below this line
 
-@app.route('/greet/<name>')
+@app.route('/greet')
 def greet():
     name = request.args.get("name")
     return render_template("greet.html", name=name)
