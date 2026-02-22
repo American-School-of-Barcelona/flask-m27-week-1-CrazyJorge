@@ -1,18 +1,25 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, session, redirect, url_for
 
 app = Flask(__name__)
+app.secret_key = "super-secret-key"
 
 # TODO: Add your routes below this line
 
-@app.route('/greet')
-def greet():
-    name = request.args.get("name")
-    return render_template("greet.html", name=name)
-
 @app.route('/')
 def index():
-    name = request.args.get("name")
-    return render_template("index.html", name=name)
+    return render_template("index.html",)
+
+@app.route('/greet')
+def greet():
+    if "name" in request.args:
+        session["name"] = request.args.get("name")
+
+    name = session.get("name")
+
+    if not name:
+        return redirect(url_for("index"))
+    
+    return render_template("greet.html", name=name)
 
 @app.route('/about')
 def about():
