@@ -1,4 +1,39 @@
 <title>Tasks!</title>
-<back><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/greet"><b>Go back</b></a></back>
-<h1>My Tasks:</h1>
+<back><a href="https://bug-free-pancake-r466w6vrq5ggfx7q9-5000.app.github.dev/greet"><b>Go back</span></b></a></back>
+<h1 id="myText">My Tasks:</h1>
 <h2><ul><li>Beat Cataclysm (my first extreme demon!)</li><li> </li></ul></h2>
+
+<style>
+    body {
+        padding: 2rem;
+        background-image: url('https://preview.redd.it/free-geometry-dash-wallpaper-v0-bc9107n96qeb1.png?width=4048&format=png&auto=webp&s=223163e5513bd80ee58737e3007d31270ffc1c5d');
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    back {
+        font-size: 30;
+    }
+
+    h1 {
+        color: white;
+        font-family: sans-serif;
+        font-size: 50;
+        text-shadow: 1px 1px 2px black;
+    }
+
+</style>
+
+<script>
+    const colorWord = document.getElementById('colorWord');
+
+    function changeTextColor() {
+        if (!colorWord) return;
+        // HSL: Hue (0-360) gives all colors, Saturation 100% = vibrant, Lightness 50% = mid-brightness
+        const hue = Math.floor(Math.random() * 360);
+        const randomColor = `hsl(${hue}, 100%, 50%)`;
+        colorWord.style.color = randomColor;
+    }
+
+    setInterval(changeTextColor, 100);
+</script>

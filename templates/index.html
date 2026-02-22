@@ -1,15 +1,16 @@
 <main>
-<div class="greet">
-    <div class="container">
-        <div class="color">
-                <form action="/greet" method="get">
-                    <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
-                    <button type="submit">Greet</button>
-                </form>
-            </div>
-        </div>
+  <div class="greet">
+    <div class="frame">
+      <div class="color">
+        <form action="/greet" method="get">
+          <input autocomplete="off" autofocus name="name" placeholder="Name" type="text">
+          <button type="submit">Greet</button>
+        </form>
+      </div>
+      <div class="container"></div>
     </div>
-</div>
+  </div>
+</main>
 
 <style>
     main {
@@ -20,19 +21,18 @@
         justify-content: center;
     }
 
-    .container {
+    .frame {
         position: relative;
-        z-index: 0;
-        background-image: url("https://gdbrowser.com/assets/epicbox.png");
-        background-size: 500px 500px;
         width: 500px;
         height: 500px;
-        padding: 1rem 1rem 2rem 1rem;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+    }
+
+    .container {
+        position: absolute;
+        inset: 0;
+        background: url("https://gdbrowser.com/assets/epicbox.png") no-repeat center/contain;
+        z-index: 2;
+        pointer-events: none; /* IMPORTANT */
     }
 
     body {
@@ -40,19 +40,18 @@
     }
 
     .color {
-        background-color: rgb(173, 115, 76);
-        width: 100%;
-        height: 100%;
-        position: relative;
+        position: absolute;
+        top: 30px;
+        bottom: 30px;
+        left: 25px;
+        right: 25px;
+        background-color: rgb(173,115,76);
         display: flex;
         align-items: center;
         justify-content: center;
-    }
-
-    .greet {
-        position: absolute;
         z-index: 1;
     }
+
 
 
 </style>
